@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Splendid</string>
+    <string name="action_settings">Settings</string>
+    <string name="preference_file_key">com.splendid.timeswind.splendid</string>
+    <string-array name="grade_arrays">
+        <item>中一</item>
+        <item>中二</item>
+        <item>中三</item>
+        <item>中四</item>
+        <item>中五</item>
+        <item>中六</item>
+    </string-array>
+    <string-array name="class_arrays">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+    <string name="title_activity_full_schedule_events">FullScheduleEventsActivity</string>
+    <string name="title_activity_full_class_schedule">FullClassSchedule</string>
+    <string name="check_all_schedule">查看所有課程表</string>
+    <string name="today_s_schedule">今日課表</string>
+    <string name="schedule_card_class">班級</string>
+    <string name="schedule_tablerow_morning_meeting">早會</string>
+    <string name="activity_card_header">校內活動/事項</string>
+    <string name="schoolday_card_header">上課日</string>
+    <string name="dse_card_header">距離DSE</string>
+    <string name="dse_card_day">X天</string>
+</resources>

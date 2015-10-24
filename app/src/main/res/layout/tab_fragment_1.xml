@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ScrollView
+            android:id="@+id/scroll_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="false"
+            android:clickable="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/DSEcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:background="#FFC107"
+                        android:paddingTop="0dp"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/DSEtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/dse_card_header"
+                            android:textColor="#444444"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/DSE"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/DSEtitle"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="15dp"
+                            android:text="@string/dse_card_day"
+                            android:textAlignment="center"
+                            android:textColor="#FFC107"
+                            android:textSize="30sp" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/SchoolDayCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:background="#EF5350"
+                        android:paddingTop="0dp"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/SchoolDayCardHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/schoolday_card_header"
+                            android:textColor="#444444"
+                            android:textSize="20sp" />
+
+
+                        <TableRow
+                            android:id="@+id/SchoolDayCardWeekdayTableRow"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/SchoolDayCardHeader"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:id="@+id/TodayWeekday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#EF5350"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="星期X"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/TomorrowWeekday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="星期X"
+                                android:textColor="#444444"
+                                android:textSize="16dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/SchoolDayCardWeekdayTableRow"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:id="@+id/SchoolDayForSchoolDayCard"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_red"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="Day X"
+                                android:textColor="#444444"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/TomorrowSchoolDayForSchoolDayCard"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="Day Y"
+                                android:textColor="#444444"
+                                android:textSize="16dp" />
+                        </TableRow>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/SchoolActivityCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:background="#FF7043"
+                        android:paddingTop="0dp"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/SchoolActivityCardViewHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/activity_card_header"
+                            android:textColor="#444444"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/SchoolActivityCardViewSubHeaderForToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/SchoolActivityCardViewHeader"
+                            android:layout_below="@+id/SchoolActivityCardViewHeader"
+                            android:layout_marginTop="16dp"
+                            android:text="今天"
+                            android:textColor="#FF7043"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textViewForActivityToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/SchoolActivityCardViewSubHeaderForTomorrow"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toEndOf="@+id/SchoolActivityCardViewSubHeaderForToday"
+                            android:text="活動名稱"
+                            android:layout_alignTop="@+id/SchoolActivityCardViewSubHeaderForToday"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:id="@+id/SchoolActivityCardViewSubHeaderForTomorrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/SchoolActivityCardViewHeader"
+                            android:layout_below="@+id/SchoolActivityCardViewSubHeaderForToday"
+                            android:layout_marginTop="16dp"
+                            android:text="明天"
+                            android:textColor="#FF7043"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textViewForActivityTomorrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/SchoolActivityCardViewSubHeaderForTomorrow"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toEndOf="@+id/SchoolActivityCardViewSubHeaderForTomorrow"
+                            android:text="活動名稱"
+                            android:layout_alignTop="@+id/SchoolActivityCardViewSubHeaderForTomorrow"
+                            android:gravity="center_vertical" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <include layout="@layout/no_schoolday_card"></include>
+
+
+                <include layout="@layout/class_schedule_card"></include>
+
+
+                <include layout="@layout/weather_card" />
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

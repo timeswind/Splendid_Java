@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/timeswind/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-806c18b1967f4bc6aed0b3a4a453a71518762f6f.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-813346c0fc7e21a4aac9f3b106ec592388a23d30.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/library-2.4.0-dcddbda9643005aa048f42c18683be0005d0f006.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-344bee9a260ca3ab504af78c6581c67605702f43.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-791427793b04c0a5b8934b97f0252f79364503f0.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-f4d540854840ad98944164ab1f6c3e9b0c5ae60d.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-394d2932cd2f5b4e8a83eb1a9ccaf9c1d715e466.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/org.solovyev.android.views/linear-layout-manager/0.5/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d9e195d6fd00f4f938e173bfee6c621fb26480f5">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-4b2fc70c65b865058bbd9ff53f03265e61c69c1f.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.github.ganfra/material-spinner/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a973f67796996adb991bd6e63a11b2b88a571219">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-c4c6ab0bba895d35d32683e35bf7743062c38a07.jar" />
+    </item>
+    <item
+        jar="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/Users/timeswind/Desktop/Developer/Splendid/app/build/intermediates/pre-dexed/debug/classes-65eb1674d5d5c74bccba218e53669725db5e61a9.jar" />
+    </item>
+
+</items>

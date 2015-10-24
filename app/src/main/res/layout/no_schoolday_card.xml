@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/NoSchooldayCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#2196F3"
+        android:paddingTop="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/NoSchoolDayCardHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="休息日"
+            android:textColor="#444444"
+            android:textSize="20sp" />
+
+        <TableRow
+            android:id="@+id/NoSchoolDayCardWeekdayTableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NoSchoolDayCardHeader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/TodayWeekdayForNoSchoolDayCard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#2196F3"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="星期X"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/TomorrowWeekdayForNoSchoolDayCard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_blue"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="星期X"
+                android:textColor="#444444"
+                android:textSize="16dp" />
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/indicatorForTomorrowSchoolDay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NoSchoolDayCardWeekdayTableRow"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:text="明天上課日"
+            android:textColor="#2196F3"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/goToFullClassScheduleFromNoSchooldayCard"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:layout_below="@+id/indicatorForTomorrowSchoolDay"
+            android:background="#2196F3"
+            android:text="查看所有課程表"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
