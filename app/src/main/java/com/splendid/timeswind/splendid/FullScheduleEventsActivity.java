@@ -2,13 +2,13 @@ package com.splendid.timeswind.splendid;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.*;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.View;
 
 import org.json.JSONException;
@@ -42,6 +42,12 @@ public class FullScheduleEventsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         String type = intent.getStringExtra("type");
+
+        AppBarLayout app_bar = (AppBarLayout) findViewById(R.id.app_bar);
+        CollapsingToolbarLayout toolbar_layout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+        app_bar.setBackgroundColor(getResources().getColor(MainActivity.currentBarColor));
+        toolbar_layout.setContentScrimColor(getResources().getColor(MainActivity.currentBarColor));
+        toolbar_layout.setStatusBarScrimColor(getResources().getColor(MainActivity.currentBarColor));
 
 
         getSupportActionBar().setTitle(message);

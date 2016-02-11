@@ -14,20 +14,20 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.WindowManager;
+
 import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.splendid.timeswind.splendid.MESSAGE";
+    public static Integer currentBarColor = R.color.colorPrimary;
     private View mRevealView;
     private View mRevealBackgroundView;
     private Toolbar mToolbar;
-    private Integer currentBarColor = R.color.colorPrimary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +77,14 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         getSupportActionBar().setTitle(todayTitle);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            animateAppAndStatusBar(currentBarColor, R.color.colorPrimary , tabPos);
+                            animateAppAndStatusBar(currentBarColor, R.color.cyan_500, tabPos);
                         }
                         break;
                     case 1:
                         getSupportActionBar().setTitle("校曆");
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
-                            animateAppAndStatusBar(currentBarColor, R.color.deep_orange_500, tabPos);
+                            animateAppAndStatusBar(currentBarColor, R.color.blue_500, tabPos);
                         }
                         break;
                     case 2:
