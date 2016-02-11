@@ -494,4 +494,10 @@ public class TabFragment1 extends Fragment {
         return result;
     }
 
+    private void switchToTomorrowMode(View v){
+
+        Log.d("tomorrowmode", "tomorrowmode");
+
+    }
+
 }

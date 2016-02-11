@@ -158,7 +158,9 @@
                                 android:padding="8dp"
                                 android:text="Day Y"
                                 android:textColor="#444444"
-                                android:textSize="16dp" />
+                                android:textSize="16dp"
+                                android:onClick="switchToTomorrowMode"
+                                android:clickable="true"/>
                         </TableRow>
 
 
@@ -256,7 +258,11 @@
 
                 <include layout="@layout/weather_card" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
 
+                ></View>
 
 
             </LinearLayout>

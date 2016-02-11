@@ -1,53 +1,55 @@
 package com.splendid.timeswind.splendid;
 
-import android.content.Context;
+/**
+ * Created by Mingtian Yang
+ */
+
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
 import android.content.Intent;
-import android.graphics.drawable.VectorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.ViewAnimationUtils;
 import android.view.WindowManager;
-
-import java.lang.ref.SoftReference;
 import java.util.Calendar;
-import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.splendid.timeswind.splendid.MESSAGE";
-
+    private View mRevealView;
+    private View mRevealBackgroundView;
+    private Toolbar mToolbar;
+    private Integer currentBarColor = R.color.colorPrimary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
+//            getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
         Toolbar mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mActionBarToolbar);
 
+        mRevealView = findViewById(R.id.reveal);
+        mRevealBackgroundView = findViewById(R.id.revealBackground);
+
         Calendar c = Calendar.getInstance();
 
-        final String todayTitle = c.get(Calendar.MONTH) + "月" + c.get(Calendar.DAY_OF_MONTH) + "日 " + getWeekday();
+        final String todayTitle = (c.get(Calendar.MONTH) + 1) + "月" + c.get(Calendar.DAY_OF_MONTH) + "日 " + getWeekday();
 
         getSupportActionBar().setTitle(todayTitle);
 
@@ -74,12 +76,24 @@ public class MainActivity extends AppCompatActivity {
                 switch (tabPos) {
                     case 0:
                         getSupportActionBar().setTitle(todayTitle);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            animateAppAndStatusBar(currentBarColor, R.color.colorPrimary , tabPos);
+                        }
                         break;
                     case 1:
                         getSupportActionBar().setTitle("校曆");
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+                            animateAppAndStatusBar(currentBarColor, R.color.deep_orange_500, tabPos);
+                        }
                         break;
                     case 2:
                         getSupportActionBar().setTitle("設置");
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+                            animateAppAndStatusBar(currentBarColor, R.color.blue_grey_900, tabPos);
+                        }
+
 
                 }
 
@@ -99,18 +113,49 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        return id == R.id.action_settings || super.onOptionsItemSelected(item);
-//
-//    }
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void animateAppAndStatusBar(int fromColor, final int toColor, int tabnumber) {
+        int startX = 6;
+        int startRadius = 1;
+        switch (tabnumber) {
+            case 0:
+                startX = 6;
+                startRadius = gouGuCaculate(mToolbar.getWidth(), mToolbar.getHeight());
+                break;
+            case 1:
+                startX = 2;
+                startRadius = gouGuCaculate(mToolbar.getWidth() / 2, mToolbar.getHeight());
+                break;
+            case 2:
+                startX = 1;
+                startRadius = gouGuCaculate(mToolbar.getWidth(), mToolbar.getHeight());
+        }
+
+
+
+
+        Animator animator = ViewAnimationUtils.createCircularReveal(
+                mRevealView,
+                mToolbar.getWidth() / startX,
+                mToolbar.getHeight() * 2 , 0,
+                startRadius
+        );
+
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                mRevealView.setBackgroundColor(getResources().getColor(toColor));
+            }
+        });
+
+        mRevealBackgroundView.setBackgroundColor(getResources().getColor(fromColor));
+        animator.setStartDelay(200);
+        animator.setDuration(125);
+        animator.start();
+        mRevealView.setVisibility(View.VISIBLE);
+
+        currentBarColor = toColor;
+    }
 
     private String getWeekday() {
 
@@ -184,5 +229,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         startActivity(intent);
+    }
+
+    private int gouGuCaculate(double one, double two){
+
+        return (int) Math.sqrt(Math.pow(one, 2)+Math.pow(two, 2));
     }
 }

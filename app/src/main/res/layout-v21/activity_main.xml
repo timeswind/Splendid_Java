@@ -10,22 +10,22 @@
     <View
         android:id="@+id/revealBackground"
         android:layout_width="match_parent"
-        android:layout_height="104dp"
+        android:layout_height="128dp"
         android:paddingTop="24dp"
         android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:layout_above="@+id/pager"
-        android:paddingBottom="24dp">
+       >
     </View>
 
     <View
         android:id="@+id/reveal"
         android:layout_width="match_parent"
-        android:layout_height="104dp"
+        android:layout_height="128dp"
         android:paddingTop="24dp"
         android:background="@color/colorPrimary"
         android:elevation="4dp"
-        android:paddingBottom="24dp">
+        >
     </View>
 
     <android.support.v7.widget.Toolbar

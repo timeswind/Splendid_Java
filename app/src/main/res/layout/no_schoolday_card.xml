@@ -16,7 +16,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="16dp"
+        android:paddingRight="0dp">
 
         <TextView
             android:id="@+id/NoSchoolDayCardHeader"
@@ -26,7 +29,8 @@
             android:layout_alignParentTop="true"
             android:text="休息日"
             android:textColor="#444444"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginLeft="16dp" />
 
         <TableRow
             android:id="@+id/NoSchoolDayCardWeekdayTableRow"
@@ -34,7 +38,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/NoSchoolDayCardHeader"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
 
             <TextView
                 android:id="@+id/TodayWeekdayForNoSchoolDayCard"
@@ -72,18 +78,23 @@
             android:paddingTop="16dp"
             android:text="明天上課日"
             android:textColor="#2196F3"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/goToFullClassScheduleFromNoSchooldayCard"
             android:layout_width="fill_parent"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/indicatorForTomorrowSchoolDay"
-            android:background="#2196F3"
             android:text="查看所有課程表"
-            android:textColor="#ffffff"
             android:textSize="16sp"
-            android:layout_marginTop="16dp" />
+            android:theme="@style/CardButtonBlue"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp" />
 
 
     </RelativeLayout>

@@ -6,10 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    <style name="TranslucentActionBar" parent="@android:style/Widget.ActionBar">
+        <item name="android:textColorPrimary">#fff</item>
+    </style>
+    <style name="TranslucentTabLayout" parent="@android:style/Widget.ActionBar.TabBar">
+        <item name="android:textColorPrimary">#fff</item>
     </style>
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
@@ -23,7 +30,20 @@
     <style name="Color1SwitchStyle">
         <item name="colorControlActivated">@color/color_for_switch</item>
     </style>
+    <style name="CardButtonBlue" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/blue_200</item>
+        <item name="colorButtonNormal">@color/blue_500</item>
+    </style>
+    <style name="CardButtonTeal" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/teal_200</item>
+        <item name="colorButtonNormal">@color/teal_500</item>
+    </style>
+    <style name="CardButtonDeepOrange" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/deep_orange_200</item>
+        <item name="colorButtonNormal">@color/deep_orange_500</item>
+    </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>

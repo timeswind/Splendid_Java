@@ -8,8 +8,8 @@ android {
         applicationId "com.splendid.timeswind.splendid"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 203100
-        versionName "2.3.1"
+        versionCode 204000
+        versionName "2.4.0"
     }
     buildTypes {
         release {
